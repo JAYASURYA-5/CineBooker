@@ -1,304 +1,569 @@
-# 🎬 CineBooker – Movie Ticket Booking Mobile Application
+# 🎬 CineBooker
 
-**CineBooker** is a Flutter-based mobile application designed to provide a convenient and user-friendly platform for discovering movies and managing movie ticket bookings.
+<div align="center">
 
-The application is built with **Flutter and Dart** and includes a dedicated server component for supporting backend functionality. It aims to provide a smooth digital cinema-booking experience through a modern mobile interface.
+## 🍿 Your Movie. Your Seat. Your Experience.
 
-## 📱 Project Overview
+### 🎟️ A Modern Movie Ticket Booking Platform
 
-Going to the cinema often involves checking movie schedules, selecting a show, choosing seats, and managing booking information.
+A full-stack movie booking web application that allows users to explore movies, view showtimes, select seats, and manage their bookings through a modern and responsive interface.
 
-**CineBooker** brings these activities together in a mobile application, making the movie-booking process easier and more convenient.
+<br>
 
-The project consists of:
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-CineBooker-FF4B4B?style=for-the-badge)](https://cine-booker-three.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/JAYASURYA-5/CineBooker)
 
-- 📱 Flutter mobile application
-- 🖥️ Server/backend component
-- 🎬 Movie-related information
-- 🎟️ Ticket booking workflow
-- 💺 Seat selection and booking management
-- 👤 User-oriented application interface
+</div>
 
-## 🎯 Objectives
+---
 
-- Provide a convenient mobile platform for movie ticket booking.
-- Allow users to explore available movies and shows.
-- Simplify the movie ticket booking process.
-- Provide an easy-to-use mobile interface.
-- Reduce the need for manual cinema ticket booking.
-- Create a foundation for a scalable cinema management platform.
+## 🌐 Live Production
+
+<div align="center">
+
+### 🚀 **[Visit CineBooker](https://cine-booker-three.vercel.app/)**
+
+Experience the deployed CineBooker application directly in your browser.
+
+**Production URL:**  
+https://cine-booker-three.vercel.app/
+
+</div>
+
+---
+
+## 📖 About The Project
+
+**CineBooker** is a modern movie ticket booking platform designed to provide users with a simple and convenient way to discover movies and book cinema tickets online.
+
+The application follows a full-stack architecture with separate frontend and backend components. The frontend provides the user-facing movie booking experience, while the backend handles application-side services and booking-related operations.
+
+The project is designed with a focus on **responsive UI, simple navigation, movie discovery, showtime selection, seat booking, and a smooth cinema-booking workflow**.
+
+---
 
 ## ✨ Key Features
 
-### 🎬 Movie Discovery
+| Feature | Description |
+|---|---|
+| 🎬 **Movie Discovery** | Browse and explore available movies |
+| 🔎 **Movie Search** | Find movies quickly through the application |
+| 🎭 **Movie Details** | View information about selected movies |
+| 🕐 **Showtimes** | Explore available movie show timings |
+| 💺 **Seat Selection** | Select preferred cinema seats |
+| 🎟️ **Ticket Booking** | Book tickets through the platform |
+| 📋 **Booking Management** | Manage previously created bookings |
+| 👤 **User Authentication** | User account and authentication functionality |
+| 📱 **Responsive UI** | Designed for different screen sizes |
+| ⚡ **Modern Web Experience** | Fast and interactive movie-booking interface |
 
-Users can browse and explore available movies through the mobile application.
+---
 
-### 📅 Show Information
+## 🎯 Project Objectives
 
-Users can view relevant movie/show information before making a booking.
+The main objectives of CineBooker are:
 
-### 💺 Seat Selection
+- 🎬 Create a convenient online movie ticket booking platform.
+- 🔎 Make movie discovery simple and user-friendly.
+- 🕐 Display available movie showtimes.
+- 💺 Provide an interactive seat selection experience.
+- 🎟️ Simplify the ticket booking process.
+- 👤 Provide a personalized user experience.
+- 📱 Build a responsive web application.
+- 🔗 Practice full-stack application development.
 
-The application can provide an interactive process for selecting available seats.
+---
 
-### 🎟️ Ticket Booking
+## 🧭 User Flow
 
-Users can proceed through the booking workflow to reserve movie tickets.
+```text
+                    🎬 CineBooker
+                         │
+                         ▼
+                   🏠 Home Page
+                         │
+                         ▼
+                  🎞️ Browse Movies
+                         │
+                         ▼
+                  🔎 Select Movie
+                         │
+                         ▼
+                 🎭 Movie Details
+                         │
+                         ▼
+                   🕐 Showtimes
+                         │
+                         ▼
+                  💺 Select Seats
+                         │
+                         ▼
+                  🎟️ Book Tickets
+                         │
+                         ▼
+                 ✅ Booking Confirmed
+                         │
+                         ▼
+                  📋 My Bookings
+```
 
-### 👤 User Interface
+---
 
-A clean and intuitive Flutter interface provides easy navigation between different sections of the application.
+## 🏗️ System Architecture
 
-### 🖥️ Backend Integration
+```text
+┌──────────────────────────────────────────────┐
+│                 👤 User                      │
+└──────────────────────┬───────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────┐
+│              🎨 Frontend                     │
+│                                              │
+│       Movie UI • Search • Seats • Booking    │
+└──────────────────────┬───────────────────────┘
+                       │
+                       │ API Requests
+                       ▼
+┌──────────────────────────────────────────────┐
+│              ⚙️ Backend Server               │
+│                                              │
+│     Authentication • Movies • Bookings       │
+└──────────────────────┬───────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────┐
+│              🗄️ Data Layer                   │
+│                                              │
+│       Users • Movies • Shows • Bookings      │
+└──────────────────────────────────────────────┘
+```
 
-The project includes a separate `server` component to support backend-related functionality.
+---
 
-### 📱 Cross-Platform Development
+## 🖥️ Main Modules
 
-Flutter allows the application to be developed for Android, iOS, and other supported platforms from a shared codebase.
+### 🏠 1. Home Page
+
+The home page acts as the entry point to the application and helps users discover movies and navigate to different sections.
+
+### 🎬 2. Movie Module
+
+Users can browse available movies and explore their details.
+
+Typical information includes:
+
+- Movie title
+- Poster
+- Description
+- Genre
+- Rating
+- Movie information
+
+### 🕐 3. Showtime Module
+
+Users can select a preferred showtime after choosing a movie.
+
+```text
+Movie
+  ↓
+Cinema
+  ↓
+Date
+  ↓
+Showtime
+```
+
+### 💺 4. Seat Selection
+
+Users can select their preferred seats before confirming their booking.
+
+```text
+┌─────── SCREEN ───────┐
+│                      │
+│  ○  ○  ●  ○  ○      │
+│                      │
+│  ○  ○  ○  ○  ●      │
+│                      │
+│  ●  ○  ○  ○  ○      │
+└──────────────────────┘
+
+○ Available
+● Selected / Unavailable
+```
+
+### 🎟️ 5. Booking Module
+
+The booking module handles the movie-ticket reservation workflow.
+
+```text
+Select Movie
+     ↓
+Select Showtime
+     ↓
+Select Seats
+     ↓
+Confirm Booking
+     ↓
+Booking Details
+```
+
+### 📋 6. Booking Management
+
+Users can access and manage their booking information after completing a reservation.
+
+---
+
+## 🔐 Authentication
+
+CineBooker includes user-oriented authentication functionality to provide a personalized experience.
+
+Authentication can be used for:
+
+- User registration
+- User login
+- Protected booking functionality
+- User-specific booking information
+- Account management
+
+---
+
+## 💺 Seat Booking Workflow
+
+One of the important parts of CineBooker is the seat-selection workflow.
+
+```text
+              🎬 Select Movie
+                     │
+                     ▼
+              🕐 Select Showtime
+                     │
+                     ▼
+               💺 Seat Layout
+                     │
+          ┌──────────┼──────────┐
+          ▼          ▼          ▼
+       Available   Selected   Unavailable
+          │          │
+          └────┬─────┘
+               ▼
+          🎟️ Confirm
+               │
+               ▼
+        ✅ Booking Created
+```
+
+---
 
 ## 🛠️ Technology Stack
 
-| Technology | Purpose |
-|---|---|
-| **Flutter** | Mobile application development |
-| **Dart** | Application programming language |
-| **Android** | Android mobile platform |
-| **iOS** | iOS mobile platform |
-| **Server / Backend** | Backend application functionality |
-| **Git** | Version control |
-| **GitHub** | Source code management |
+The repository uses a separate frontend and backend structure, with the `cinebooker` and `server` directories maintained inside the project.
 
-## 📂 Project Structure
+### 🎨 Frontend
+
+- React
+- Modern JavaScript
+- Responsive UI
+- Component-based architecture
+- Modern CSS/UI styling
+
+### ⚙️ Backend
+
+- Server-side application
+- API-based communication
+- Booking-related operations
+- User/application data handling
+
+### 🚀 Deployment
+
+- **Frontend / Production:** Vercel
+- **Repository:** GitHub
+
+---
+
+## 📁 Project Structure
 
 ```text
 CineBooker/
 │
-├── cinebooker/
-│   └── Flutter mobile application
-│       ├── lib/
-│       ├── android/
-│       ├── ios/
-│       └── ...
+├── 📂 cinebooker/
+│   │
+│   ├── 🎨 Frontend application
+│   ├── 📄 Components
+│   ├── 📄 Pages
+│   ├── 🎨 Styles
+│   └── ⚙️ Frontend configuration
 │
-├── server/
-│   └── Backend / server-side application
+├── 📂 server/
+│   │
+│   ├── ⚙️ Backend application
+│   ├── 🔗 API services
+│   ├── 🎟️ Booking logic
+│   └── 🔐 Server-side functionality
 │
-└── README.md
+└── 📄 README.md
 ```
 
-## ⚙️ Requirements
+The current GitHub repository contains the `cinebooker` and `server` directories as its main project folders.
 
-Before running the application, make sure the following are installed:
+---
 
-- Flutter SDK
-- Dart SDK
-- Android Studio or Visual Studio Code
-- Android Emulator or physical Android device
-- Git
+## 🚀 Getting Started
 
-Verify your Flutter installation:
-
-```bash
-flutter doctor
-```
-
-## 🚀 Installation
-
-### 1. Clone the Repository
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/JAYASURYA-5/CineBooker.git
 ```
 
-### 2. Navigate to the Repository
+### 2️⃣ Navigate to the Project
 
 ```bash
 cd CineBooker
 ```
 
-### 3. Navigate to the Flutter Application
+### 3️⃣ Install Frontend Dependencies
 
 ```bash
 cd cinebooker
+npm install
 ```
 
-### 4. Install Dependencies
+### 4️⃣ Start the Frontend
 
 ```bash
-flutter pub get
+npm run dev
 ```
 
-### 5. Check Connected Devices
+### 5️⃣ Run the Backend
+
+Open another terminal:
 
 ```bash
-flutter devices
+cd server
+npm install
 ```
 
-Connect an Android device or start an Android Emulator.
+Then use the backend's configured development/start command.
 
-### 6. Run the Application
-
-```bash
-flutter run
-```
-
-The CineBooker mobile application will build and launch on the selected device.
-
-## 📱 Run on Android
-
-For Android development:
-
-```bash
-flutter run
-```
-
-You can also open the `cinebooker` folder in Android Studio and run the application using the **Run ▶** button.
-
-## 🍎 Run on iOS
-
-If you are developing on macOS with Xcode installed:
-
-```bash
-flutter run -d ios
-```
-
-## 🌐 Run on Web
-
-If Flutter Web is enabled in your environment:
-
-```bash
-flutter run -d chrome
-```
-
-## 🏗️ Build Android APK
-
-To generate an APK:
-
-```bash
-flutter build apk
-```
-
-For a release build:
-
-```bash
-flutter build apk --release
-```
-
-The generated APK will be available under:
-
-```text
-build/app/outputs/flutter-apk/
-```
-
-## 🔄 Application Workflow
-
-```text
-        Open CineBooker
-              ↓
-        Browse Movies
-              ↓
-       Select a Movie
-              ↓
-       View Show Details
-              ↓
-        Select Show
-              ↓
-        Select Seats
-              ↓
-       Confirm Booking
-              ↓
-        Booking Details
-              ↓
-        🎟️ Movie Ticket
-```
-
-## 🧪 Testing
-
-Run Flutter tests using:
-
-```bash
-flutter test
-```
-
-Run static code analysis using:
-
-```bash
-flutter analyze
-```
-
-## 🎨 User Experience
-
-CineBooker focuses on providing:
-
-- Simple navigation
-- Mobile-friendly interface
-- Easy movie discovery
-- Convenient show selection
-- Interactive seat selection
-- Simple booking workflow
-- Clear presentation of booking information
-
-## 🔮 Future Enhancements
-
-The application can be further enhanced with:
-
-- 🔐 User registration and authentication
-- 🎬 Advanced movie search and filtering
-- 🏢 Multiple cinema and theatre support
-- 💺 Real-time seat availability
-- 💳 Online payment integration
-- 🎟️ Digital QR-code tickets
-- 🔔 Booking confirmation notifications
-- 📧 Email and SMS notifications
-- ⭐ Movie ratings and reviews
-- ❤️ Watchlist and favourites
-- 📍 Location-based cinema discovery
-- 🧾 Booking history
-- 👤 User profile management
-- 🛠️ Admin dashboard for movie and show management
-
-## 🌟 Benefits
-
-CineBooker provides a digital approach to cinema ticket booking by bringing movie discovery, show selection, seat selection, and booking management into a single mobile application.
-
-The project also provides practical experience in:
-
-- Flutter mobile development
-- Dart programming
-- UI/UX development
-- Backend integration
-- Application testing
-- Cross-platform development
-- Git and GitHub workflow
-
-## 🎓 Project Purpose
-
-CineBooker was developed as a **Flutter mobile application project** to demonstrate how modern mobile technologies can be used to create a convenient movie-ticket booking solution.
-
-The project combines a Flutter-based mobile interface with a server component to create a foundation for a complete cinema-booking system.
-
-## 👨‍💻 Developer
-
-**Jayasurya K**
-
-GitHub:  
-https://github.com/JAYASURYA-5
-
-## 📌 Repository
-
-**CineBooker GitHub Repository:**  
-https://github.com/JAYASURYA-5/CineBooker
-
-## ⭐ Support
-
-If you find this project useful or interesting, consider giving the repository a ⭐ on GitHub.
+> **Note:** If the backend requires environment variables, configure them using the environment-variable names provided by your server configuration before starting the application.
 
 ---
 
-### 🎬 CineBooker
+## 🌐 Production Deployment
 
-**Book Your Movie. Enjoy the Experience.**
+CineBooker is deployed and accessible online.
 
-Made with ❤️ using **Flutter & Dart**
+### 🚀 Live Application
+
+**https://cine-booker-three.vercel.app/**
+
+[![Visit Website](https://img.shields.io/badge/🚀_Open_CineBooker-Live_Production-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://cine-booker-three.vercel.app/)
+
+---
+
+## 📸 Screenshots
+
+Add screenshots of your deployed application to make the README more attractive.
+
+```markdown
+## 📸 Screenshots
+
+### 🏠 Home Page
+
+![Home Page](screenshots/home.png)
+
+### 🎬 Movies
+
+![Movies](screenshots/movies.png)
+
+### 🎭 Movie Details
+
+![Movie Details](screenshots/movie-details.png)
+
+### 💺 Seat Selection
+
+![Seat Selection](screenshots/seat-selection.png)
+
+### 🎟️ Booking
+
+![Booking](screenshots/booking.png)
+
+### 📋 My Bookings
+
+![My Bookings](screenshots/my-bookings.png)
+```
+
+Recommended structure:
+
+```text
+screenshots/
+├── home.png
+├── movies.png
+├── movie-details.png
+├── seat-selection.png
+├── booking.png
+└── my-bookings.png
+```
+
+---
+
+## 🎨 UI Highlights
+
+CineBooker focuses on providing:
+
+- 🎬 Movie-focused interface
+- 🖼️ Visual movie discovery
+- 💺 Interactive seat selection
+- 🕐 Simple showtime navigation
+- 🎟️ Clear booking workflow
+- 📱 Responsive layouts
+- ✨ Modern user experience
+- 🔄 Smooth navigation
+
+---
+
+## 🔮 Future Enhancements
+
+The project can be extended with:
+
+### 🎬 Movie Features
+
+- ⭐ Movie ratings and reviews
+- 🔎 Advanced movie filters
+- 🎞️ Trailer integration
+- 🎭 Genre-based recommendations
+- 🌍 Multiple cinema locations
+
+### 💳 Booking Features
+
+- 💳 Online payment gateway
+- 📧 Email booking confirmation
+- 📱 SMS notifications
+- 🎫 Digital/QR ticket
+- ❌ Booking cancellation
+- 💰 Refund management
+
+### 👨‍💼 Admin Features
+
+- 📊 Admin dashboard
+- 🎬 Movie management
+- 🏢 Cinema management
+- 🕐 Showtime management
+- 💺 Seat configuration
+- 📈 Booking analytics
+- 💰 Revenue reports
+- 👥 User management
+
+### 🤖 Smart Features
+
+- 🤖 AI movie recommendations
+- 🧠 Personalized suggestions
+- 💬 AI movie assistant
+- 📊 Personalized viewing insights
+
+---
+
+## 🎓 What I Learned
+
+Through the CineBooker project, I gained practical experience in:
+
+- Full-stack web application development
+- Frontend and backend integration
+- REST API communication
+- User authentication
+- Movie data management
+- Seat-selection workflows
+- Booking system design
+- Responsive web development
+- Deployment using Vercel
+- Git and GitHub project management
+
+---
+
+## 🌟 Why CineBooker?
+
+Traditional cinema ticket booking can require users to visit a cinema or use complicated booking processes.
+
+**CineBooker** provides a digital experience where users can:
+
+```text
+Discover 🎬
+   ↓
+Choose 🎭
+   ↓
+Select 🕐
+   ↓
+Pick 💺
+   ↓
+Book 🎟️
+   ↓
+Enjoy 🍿
+```
+
+The goal is to make movie-ticket booking **simple, convenient, and user-friendly**.
+
+---
+
+## 📊 Project Highlights
+
+<div align="center">
+
+| 🎬 Movies | 💺 Seats | 🕐 Showtimes | 🎟️ Bookings |
+|:---:|:---:|:---:|:---:|
+| Discover | Select | Choose | Confirm |
+
+</div>
+
+---
+
+## 👨‍💻 Developer
+
+<div align="center">
+
+### **Jayasurya K**
+
+💻 **Full Stack Developer | Flutter Developer | Web Developer**
+
+🔗 **GitHub:**  
+https://github.com/JAYASURYA-5
+
+🌐 **Portfolio:**  
+https://jayasurya6.netlify.app/
+
+🎬 **CineBooker Production:**  
+https://cine-booker-three.vercel.app/
+
+</div>
+
+---
+
+## ⭐ Support
+
+If you like this project:
+
+⭐ **Star the repository**
+
+🍴 **Fork the repository**
+
+🐛 **Report issues**
+
+💡 **Suggest improvements**
+
+🤝 **Contribute to the project**
+
+---
+
+<div align="center">
+
+# 🎬 CineBooker
+
+### **Discover • Select • Book • Enjoy 🍿**
+
+Built with ❤️ by **Jayasurya K**
+
+<br>
+
+**🌐 Live:** https://cine-booker-three.vercel.app/
+
+</div>
